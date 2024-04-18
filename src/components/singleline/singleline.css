@@ -1,0 +1,43 @@
+/* Styles for Singleline component */
+.Singleline {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 10vh;
+  background-color: #000000; 
+  border-radius: 13px;
+  margin: 20px auto; 
+  width: 60%;
+  overflow: hidden;
+}
+
+.Singleline h1 {
+  text-align: center;
+  font-size: 24px; /* Heading font size */
+  color: #fdfdfd; /* Heading color */
+  overflow: hidden;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .Singleline {
+position: relative;
+    width: 80%; /* Adjusted width for mobile devices */
+  }
+
+  .Singleline h1 {
+    font-size: 18px; /* Decreased font size for better fit on smaller screens */
+  }
+}
+@media screen and (min-width: 1150px) {
+  .Singleline {
+    position: sticky;
+        width: 80%; /* Adjusted width for mobile devices */
+      }
+    
+      .Singleline h1 {
+        font-size: 34px; /* Decreased font size for better fit on smaller screens */
+      }
+  }

@@ -1,0 +1,170 @@
+.box_main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  background-color: #eef6f6;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  gap: 30px;
+  cursor: pointer;
+
+}
+
+.Box_container {
+  position: relative;
+  background-color: #d4d2d2;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflow */
+}
+
+.Box_content {
+  transition: opacity 0.3s ease; /* Fade transition */
+}
+
+.Box_imageContainer {
+  margin-bottom: 20px;
+}
+
+.Box_image {
+  width: 300px;
+  height: 430px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.Box_heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.Box_paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.Box_overlay {
+  position: absolute;
+  bottom: 0; /* Position from the bottom */
+  left: 0;
+  width: 100%;
+  height: 0; /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow */
+  transition: height 0.5s ease; /* Smooth transition of height */
+  cursor: pointer;
+
+}
+
+.Box_container:hover .Box_content {
+  opacity: 0.3; /* Fade out content on hover */
+}
+
+.Box_container:hover .Box_overlay {
+  height: 100%; /* Expand overlay to full height on hover */
+}
+
+.Box_overlay p {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+@keyframes moveUp {
+  from {
+    transform: translateY(400);
+  }
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+.box_main.animated .Box_container {
+  animation: moveUp 0.8s ease-in-out forwards alternate;
+}
+
+
+
+
+@media screen and (max-width: 390px) {
+  .box_main {
+    height: 350vh;
+    /* max-height: 200vh; */
+    gap: 50px; 
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .box_main {
+    /* height: 1vh; */
+    max-height: 250vh;
+    gap: 50px; 
+  }
+  
+  .Box_container {
+    max-width: 60%; 
+    margin: 0 auto;
+  }
+  
+  .Box_image {
+    width: 100%; 
+    height: 30rem;
+    border-radius: 0; 
+  }
+  
+  .Box_heading {
+    font-size: 18px;
+  }
+  
+  .Box_paragraph {
+    font-size: 14px; 
+  }
+  
+  .Box_overlay p {
+    font-size: 18px; 
+}
+}
+
+@media screen and (max-width: 1250px) {
+  .box_main {
+    /* height: 150vh; */
+    max-height: 200vh;
+    
+    gap:50px; 
+  }
+  
+  .Box_container {
+    max-width: 400px; 
+    margin: 0 auto;
+  }
+  
+  .Box_image {
+    width: 100%; 
+    height: 30rem;
+    border-radius: 0; 
+  }
+  
+  .Box_heading {
+    font-size: 18px;
+  }
+  
+  .Box_paragraph {
+    font-size: 14px; 
+  }
+  
+  .Box_overlay p {
+    font-size: 18px; 
+}
+}

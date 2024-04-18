@@ -1,0 +1,169 @@
+.home_container {
+  width: 100%;
+  min-height: 200vh; 
+}
+
+.homenavtop {
+  height: 5vh;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.homenav {
+  position: sticky;
+  top: 0px;
+  height: 10vh; 
+  z-index: 999;
+  background-color: #999999;
+  overflow: hidden;
+}
+
+.homecover {
+  width: 100%;
+  height: 85vh;
+  z-index: -2;
+  overflow: hidden;
+  /* margin-top: 40px; */
+  margin-bottom: 50px;
+  
+}
+
+
+.Singleline{
+  position: sticky;
+  top: 0px;
+  height: 30vh;
+  overflow: hidden;
+  z-index: 999;
+}
+.Box {
+  /* height: 100vh; */
+  z-index: -2;
+  overflow: hidden;
+
+}
+.page1 {
+  height: 100vh; 
+  width: 100%;
+  position: sticky;
+  top: 0; 
+  left: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: -1;
+
+ }
+
+.page1 img {
+  object-fit: cover;
+  border-radius: 20px;
+  position: sticky;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  
+}
+.Singleline{
+  position: sticky;
+  top: 0px;
+  height: 30vh;
+  overflow: hidden;
+  z-index: 999;
+}
+.developers{
+  z-index: 1;
+  height: 100vh;
+}
+
+/* styles.css */
+/* For webkit based browsers (Chrome, Safari) */
+/* You can add similar styles for other browsers like Firefox and Edge */
+::-webkit-scrollbar {
+  width: 12px; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: crimson; 
+  /* background-color: #000000;  */
+  border-radius: 6px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: crimson; 
+  /* background-color: #999999;  */
+}
+
+/* Add media queries for responsiveness */
+
+
+@media screen and (max-width: 576px) {
+  .homenavtop,
+  .homenav {
+    height: auto; 
+  }
+
+  .homecover {
+    height: 50vh; 
+  }
+  .Singleline{
+    position: sticky;
+    top: 0px;
+    height: 25vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .Box {
+    /* height: 245vh; */
+    z-index: -1;
+    overflow: hidden;
+  }
+  .page1 {
+  
+    border-radius: none;
+z-index: -2;
+   }
+  
+  .page1 img {
+    border-radius: none;
+   
+    
+  }
+}
+@media screen and (max-width: 768px) {
+  .homenav {
+    height: 8vh; 
+  }
+
+  .homecover {
+    height: 85vh; 
+  }
+  .Singleline{
+    position: sticky;
+    top: 0px;
+    height: 65vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .Box {
+    /* height: 330vh; */
+    /* margin-top: 150px; */
+    z-index: -1;
+    overflow: hidden;
+  
+  }
+  .page1 {
+    border-radius: none;
+
+    z-index: -2;
+  
+   }
+  
+  .page1 img {
+    border-radius: none;
+
+    
+  }
+}

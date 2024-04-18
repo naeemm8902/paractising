@@ -1,0 +1,105 @@
+.button_wrapper {
+    position: absolute;
+    top: 45%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 999; /* Ensure it's above other content */
+  }
+  
+  .styledbutton {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #848181;
+    border: 2px solid rgb(48, 47, 47);
+    letter-spacing: 2px;
+    text-align: center;
+    /* Remove the redundant position: fixed; */
+    /* position: fixed; */
+    transition: all .35s;
+    border-radius: 5px;
+    z-index: 999; /* Ensure it's above other content */
+  }
+  
+  .styledbutton span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .styledbutton:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    color: #fff;
+    transition: all .35s;
+    z-index: -1;
+    border-radius: 5px;
+    /* z-index: 999; */
+  }
+  
+  .styledbutton:hover {
+    z-index: 999;
+    color: #fff !important; 
+  }
+  
+  .styledbutton:hover:after {
+    width: 100%;
+    z-index: 999;
+    /* background: #ff003b;  */
+    color: #ffffff !important; 
+  }
+  
+  /* Mobile Devices */
+  @media only screen and (max-width: 600px) {
+    .button_wrapper {
+      top: 25%; /* Adjust positioning for mobile */
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .styledbutton {
+      width: 80px; /* Adjust button size for mobile */
+      height: 20px;
+      line-height: 15px;
+      font-size: 12px; /* Adjust font size for mobile */
+    }
+  }
+  
+  /* Laptop and Desktop Devices */
+  @media only screen and (min-width: 601px) {
+    .button_wrapper {
+      top: 30%; /* Revert positioning for laptop/desktop */
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .styledbutton {
+      width: 150px; /* Revert button size for laptop/desktop */
+      height: 30px;
+      line-height: 25px;
+      font-size: 14px; /* Revert font size for laptop/desktop */
+    }
+  }
+  @media only screen and (min-width: 1100px) {
+    .button_wrapper {
+      top: 35%; /* Revert positioning for laptop/desktop */
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .styledbutton {
+      width: 150px; /* Revert button size for laptop/desktop */
+      height: 40px;
+      line-height: 35px;
+      font-size: 16px; /* Revert font size for laptop/desktop */
+    }
+  }
+  

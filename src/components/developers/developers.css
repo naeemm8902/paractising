@@ -1,0 +1,155 @@
+.developer{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.developer_side {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .developer_side h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .developer_side p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Animation classes */
+  .animate__animated {
+    animation-duration: 1s;
+  }
+  
+  .animate__fadeInDown {
+    animation-name: fadeInDown;
+  }
+  
+  .animate__fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+.developers-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    padding: 20px; 
+  }
+  
+  .developer-card {
+    flex-direction: row;
+    width: 250px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Increased border radius for a smoother look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .developer-card:hover {
+    transform: translateY(-5px); /* Added slight elevation effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .developer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Increased border radius for a smoother look */
+  }
+  
+  .developer-name {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .developer-role {
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  .developer-bio {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  @media (max-width: 768px) {
+    .developer {
+        flex-direction: column;
+        /* align-items: flex-start; */
+        height: auto; 
+
+
+    }
+
+    .developers-container {
+        /* flex-direction: row; */
+        align-items: center;
+        justify-content: space-around;
+        width: 50vh;
+    }
+
+    .developer_side,
+    .developers-container {
+        /* width: 40%; */
+        /* height: auto; */
+    }
+
+    .developer-card {
+        max-width: none;
+    }
+}
+  @media (max-width:390px) {
+    .developer {
+        
+
+
+    }
+
+    .developers-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .developer_side,
+    .developers-container {
+        /* width: 40%; */
+        /* height: auto; */
+    }
+
+}

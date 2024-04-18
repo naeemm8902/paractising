@@ -1,0 +1,23 @@
+.main{
+
+}
+.main .non_sticky {
+    text-align: center;
+    background-color: rgb(22, 43, 127);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Adjust the z-index as needed */
+  }
+  
+.main .sticky{
+    text-align: center;
+    background-color: red;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+  }
+  
+.main p{
+    font-size: 24px;
+    text-align: center;
+}

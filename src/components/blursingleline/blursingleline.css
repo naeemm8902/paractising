@@ -1,0 +1,61 @@
+/* Container styles */
+.blur_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Image container styles */
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 70%;
+  height: 30vh;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  background-color: #f2f1ed80;
+  box-shadow: 0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e, 0 2.288533303243457px 2.288533303243457px -2.5px #00000029, 0 10px 10px -3.75px #00000010;
+  overflow: hidden; /* Ensure images don't overflow the container */
+  gap: 10px; /* Add gap between images */
+}
+
+/* Image styles */
+.image-container img {
+  max-width: 130px;
+  max-height: 100%;
+  transform: translateX(-50%);
+  animation: marquee 10s linear infinite; /* Apply marquee animation */
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100% ); } /* Adjust distance for the width of the .blur_container */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .blur_container {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+  
+  .image-container {
+    width: 90%; /* Adjust width for smaller screens */
+    height: 20vh; /* Adjust height for smaller screens */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+  
+  .image-container img {
+    max-width: 100px; /* Adjust max-width for smaller screens */
+  }
+}

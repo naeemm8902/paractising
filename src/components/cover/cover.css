@@ -1,0 +1,264 @@
+
+.container {
+    position: relative;
+    /* width: 100vw;  */
+    height: 85vh;
+    display: flex;
+    overflow: hidden;
+    /* align-items: center; */
+    font-weight: 600;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.container .left {
+    flex: 1;
+    padding: 20px; /* Add some padding for better readability */
+    position: relative; /* Ensure text remains in front of image */
+    z-index: 1; /* Ensure text remains in front of image */
+}
+
+.container .right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure image remains behind text */
+}
+
+.container .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+.container .left h1 {
+    color: transparent;
+    position: relative;
+    display: inline-block;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: var(--text-color); /* Set text color using CSS variable */
+
+}
+
+/* Rest of your CSS remains unchanged */
+
+.container .left h1:nth-of-type(1) {
+    animation-delay: 2s;
+    color: var(--text-color); /* Set text color using CSS variable */
+    /* color: rgb(24, 90, 181); */
+}
+
+.container .left h1:nth-of-type(2) {
+    animation-delay: 4s;
+    color: var(--text-color); /* Set text color using CSS variable */
+
+}
+
+.container .left h1:nth-of-type(3) {
+    /* animation: text_reveal_name 0.1s ease forwards; */
+    animation-delay: 7s;
+    color: crimson; /* Set text color using CSS variable */
+    font-size: 3vw;
+    font-weight: 600;
+
+}
+
+h1 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: crimson;
+    animation: text_reveal_box 3s ease forwards;
+    animation-delay: 1s; 
+    
+}
+.container .left h1:nth-of-type(1) span {
+
+    animation-delay: 3s;
+}
+
+.container .left h1:nth-of-type(2) span {
+
+    animation-delay: 6s; 
+}
+.container .left h1:nth-of-type(3) span {
+    animation-delay: 9s; 
+}
+.container .left .nav-link{
+    position: fixed;
+}
+@keyframes text_reveal_box {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal {
+    0% {
+        color: transparent;
+        transform: translateY(50px); /* Initial position */
+        opacity: 0; /* Initial opacity */
+    }
+    100% {
+        /* color: var(--navbar-background-top); */
+        transform: translateY(0); /* Final position */
+        opacity: 1; /* Final opacity */
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: crimson;
+        font-weight: 500;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+.button_wrapper{
+    /* position: relative; */
+    /* top: 30%; */
+}
+/* For tablets */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 85vh;
+        overflow: hidden;
+    }
+    
+}
+
+/* For mobiles */
+@media only screen and (max-width: 480px) {
+    .container {
+        position: relative;
+        width: 100vw; /* Set width to full viewport width */
+        height: 85vh; /* Set height to full viewport height */
+    }
+    
+    .container .left {
+        flex: 1;
+        padding: 10px; 
+        position: relative; 
+        z-index: 1; 
+    }
+    
+    .container .right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* Ensure image remains behind text */
+    }
+    
+    .container .right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px);
+    }
+    
+    .container .left h1 {
+        color: transparent;
+        position: relative;
+        display: inline-block;
+        animation: text_reveal 0.5s ease forwards;
+        animation-delay: 1s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        color: var(--text-color); /* Set text color using CSS variable */
+    
+    }
+    
+    /* Rest of your CSS remains unchanged */
+    
+    .container .left h1:nth-of-type(1) {
+        animation-delay: 1s;
+        color: var(--text-color); /* Set text color using CSS variable */
+        /* color: rgb(24, 90, 181); */
+    }
+    
+    .container .left h1:nth-of-type(2) {
+        animation-delay: 2s;
+        color: var(--text-color); /* Set text color using CSS variable */
+    
+    }
+    
+    .container .left h1:nth-of-type(3) {
+        animation: text_reveal_name 0.1s ease forwards;
+        animation-delay: 3s;
+        color: crimson; /* Set text color using CSS variable */
+        font-size: 3vw;
+        font-weight: 600;
+    
+    }
+    
+    h1 span {
+        position: absolute;
+        left: 0;
+        top: 0%;
+        width: 0;
+        height: 100%;
+        background-color: crimson;
+        animation: text_reveal_box 1s ease forwards;
+        animation-delay: 1s; 
+        z-index: -3;
+    }
+    .container .left h1:nth-of-type(1) span {
+    
+        animation-delay: .5s;
+    }
+    
+    .container .left h1:nth-of-type(2) span {
+    
+        animation-delay: 1.5s; 
+    }
+    .container .left h1:nth-of-type(3) span {
+        animation-delay: 2.5s; 
+    }
+    
+    @keyframes text_reveal_box {
+        0% {
+            width: 0;
+            left: 0;
+        }
+        50% {
+            width: 100%;
+            left: 0;
+        }
+        100% {
+            width: 0;
+            left: 100%;
+        }
+    }
+    @keyframes text_reveal {
+        0% {
+            color: transparent;
+            transform: translateY(50px); /* Initial position */
+            opacity: 0; /* Initial opacity */
+        }
+        100% {
+            /* color: var(--navbar-background-top); */
+            transform: translateY(0); /* Final position */
+            opacity: 1; /* Final opacity */
+        }
+    }
+}

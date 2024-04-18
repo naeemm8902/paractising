@@ -1,0 +1,18 @@
+:root {
+    --background: #007bff; 
+    --navbar-background-top: #293241; 
+    --navbar-background: #fff; 
+    --secondary-color: #17cf97;
+    --font-size-medium: 16px;
+    --navhover-top:#f8b400;
+    --navhover:#007bff;
+
+  }
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .haji{
+    background-color: rgb(108, 20, 20);
+    z-index: -5;
+  }
